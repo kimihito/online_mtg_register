@@ -44,10 +44,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">OnlineMtgRegister</a>
+          <a class="brand" href="<%=root_url%>">OnlineMtgRegister</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav pull-right">
+              <% if current_user %>
+
+                <%= current_user.name %>さん <%= link_to "ログアウト",logout_path %>
+
+            <% else %>
+
               <li><%=link_to "Login on Facebook", "/auth/facebook" %></a></li>
+          <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -56,7 +63,7 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span9">
+        <div class="span12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
