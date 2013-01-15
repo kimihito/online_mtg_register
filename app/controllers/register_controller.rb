@@ -21,6 +21,6 @@ class RegisterController < ApplicationController
 				current_user.save!
 			end
 		end
-		redirect_to choice_path
+		redirect_to choice_path, :notice => "編集しました"
 	end
 end

@@ -64,6 +64,8 @@ OnlineMtgRegister::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
   match "/register" => "register#index", :as => :register
+  match "/edit" => "register#index", :as => :edit
   match "/choice" => "choice#index", :as => :choice
   match "/register/record" => "register#record"
+  match "/make" => "make#index", :as => :make
 end
