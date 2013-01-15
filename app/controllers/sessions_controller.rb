@@ -7,12 +7,12 @@ class SessionsController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      redirect_to root_url, :notice => "ログインしました"
+      redirect_to choice_path, :notice => "ログインしました"
     else
       user = User.create_with_omniauth(auth)
 #TODO db:resetとかやるとsession残ってて見つかりませんだらけになる 
       session[:user_id] = user.id
-#      session[:user_id] = nil
+     # session[:user_id] = nil
       redirect_to register_path, :notice =>  "#{auth["info"]["name"]}さんの#{auth["provider"]}アカウントと接続しました"
     end
   end

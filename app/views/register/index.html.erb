@@ -1,0 +1,10 @@
+
+<%= form_tag("register/record") do %>
+	<%= field_set_tag "ユーザー登録" do %>
+		<label>名前</label>
+		<%= text_field_tag("name", nil, :placeholder => current_user.name) %>
+		<label>メールアドレス</label>
+		<%= email_field_tag("email", nil, :placeholder => current_user.email) %>
+	<% end %>
+	<%= submit_tag("登録", :class => "btn btn-success")%>
+<% end %>
