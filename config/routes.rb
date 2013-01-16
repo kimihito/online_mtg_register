@@ -1,4 +1,7 @@
 OnlineMtgRegister::Application.routes.draw do
+  match '/:id/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  #match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
   get "choice/index"
 
   get "main/index"

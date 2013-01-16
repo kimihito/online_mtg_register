@@ -41,6 +41,7 @@ GEM
     commonjs (0.2.6)
     daemons (1.1.9)
     erubis (2.7.0)
+    event-calendar (2.3.3)
     eventmachine (1.0.0)
     excon (0.16.10)
     execjs (1.4.0)
@@ -174,6 +175,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  event-calendar
   foreman
   heroku
   jquery-rails
