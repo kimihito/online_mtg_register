@@ -23,10 +23,11 @@ ActiveRecord::Schema.define(:version => 20130116071436) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "email"
+    t.string   "provider",   :null => false
+    t.string   "uid",        :null => false
+    t.string   "name",       :null => false
+    t.string   "email",      :null => false
+    t.string   "skype_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

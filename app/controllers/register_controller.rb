@@ -21,6 +21,13 @@ class RegisterController < ApplicationController
 				current_user.save!
 			end
 		end
+		if params[:skype_id] != ""
+			if current_user.skype_id != params[:skype_id]
+				skype_id = params[:skype_id]
+				current_user.skype_id = skype_id
+				current_user.save!
+			end
+		end
 		redirect_to choice_path, :notice => "編集しました"
 	end
 end

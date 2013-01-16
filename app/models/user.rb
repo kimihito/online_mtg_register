@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :provider, :uid
+  attr_accessible :email, :name, :provider, :uid, :skype_id
   
   has_many :events
 
@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
     create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
+      user.skype_id = ""
 
       if user.provider == "facebook"
         user.name = auth["info"]["name"]
