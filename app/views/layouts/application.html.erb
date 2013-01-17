@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "OnlineMtgRegister" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "おんあぽ" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -44,12 +44,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="<%=root_url%>">OnlineMtgRegister</a>
+          <a class="brand" href="<%=root_url%>">おんあぽ</a>
           <div class="container nav-collapse">
             <ul class="nav"> 
-              <li><a href="<%=make_path%>">つくる</a></li>
-              <li><a href="<%=make_path%>">つくる</a></li>
-              <li><a href="<%=make_path%>">つくる</a></li>
+              <li><a href="<%=make_path%>">つかいかた</a></li>
+              <li><a href="<%=make_path%>">みる</a></li>
+              <li><a href="<%=make_path%>">おといあわせ</a></li>
             </ul>
             <ul class="nav pull-right">
               <% if current_user %>
@@ -91,9 +91,11 @@
         </div>
       </div><!--/row-->
 
+      <div class="container">
       <footer>
         <p>&copy; Company 2012</p>
       </footer>
+    </div>
 
     </div> <!-- /container -->
 
