@@ -1,0 +1,2 @@
+module ViewCalendarHelper
+end

@@ -1,0 +1,6 @@
+
+カレンダー一覧
+
+<% @user.each do |user| %>
+  <%= link_to "#{user.name}'s Calendar","/users/#{user.id}/calendar" %>
+<% end %>

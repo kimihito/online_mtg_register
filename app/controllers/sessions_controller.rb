@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      redirect_to choice_path, :notice => "ログインしました"
+      redirect_to mypage_path, :notice => "ログインしました"
     else
       user = User.create_with_omniauth(auth)
 #TODO db:resetとかやるとsession残ってて見つかりませんだらけになる 

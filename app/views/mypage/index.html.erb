@@ -1,0 +1,18 @@
+<h2><%=current_user.name%>さんのマイページ</h2>
+<div class="container">
+  <div class="span12">
+    <div class="span6">
+      <strong>ユーザー情報</strong><br />
+      ユーザー名:<%=current_user.name %> <br />
+
+      メールアドレス:<%=current_user.email %><br />
+
+      SkypeID:<%=current_user.skype_id %><br />
+
+      <%=link_to "ユーザー名の編集", edit_path, :class => "btn" %>
+    </div>
+    <div class="span6">
+      <strong>マイカレンダーに登録</strong><br />
+      <%=link_to "イベントを登録", edit_cal_path, :class => "btn" %>
+      イベントイベントイベントイベント
+  </div></div>

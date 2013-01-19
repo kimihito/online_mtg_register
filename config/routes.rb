@@ -2,9 +2,7 @@ OnlineMtgRegister::Application.routes.draw do
   match 'users/:id/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
   #match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
-  get "choice/index"
-
-  get "main/index"
+  get "mypage/index"
 
   get "register/index"
 
@@ -67,8 +65,8 @@ OnlineMtgRegister::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#callback"
   match "/logout" => "sessions#destroy", :as => :logout
   match "/register" => "register#index", :as => :register
+  match "/my" => "mypage#index", :as => :mypage
   match "/edit" => "register#index", :as => :edit
-  match "/choice" => "choice#index", :as => :choice
   match "/register/record" => "register#record"
-  match "/make" => "make#index", :as => :make
+  match "/calendars" => "view_calendar#index", :as => :calendars
 end

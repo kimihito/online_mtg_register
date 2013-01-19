@@ -40,7 +40,7 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"><</span>
+            <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
@@ -48,9 +48,11 @@
           <div class="container nav-collapse">
             <ul class="nav"> 
               <li><a href="<%=make_path%>">つかいかた</a></li>
-              <li><a href="<%=make_path%>">みる</a></li>
-              <li><a href="<%=make_path%>">おといあわせ</a></li>
+              <li><a href="<%=calendars_path%>"><i class="icon-calendar"> みる</i></a></li>
+              <li><a href="mailto:no-reply@on-appo.info?bcc="kimihito@geeoki.com"?subject=お問い合わせ?body=こちらに記入お願いします"><i class="icon-envelope">お問い合わせ</i></a></li>
             </ul>
+
+
             <ul class="nav pull-right">
               <% if current_user %>
                   <li class="dropdown">
