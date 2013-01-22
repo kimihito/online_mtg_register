@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=279669395469559";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container">
   <div class="hero-unit">
     <h2>おんあぽ<small>オンラインスケジューリングカレンダー</small></h2>
@@ -7,5 +16,10 @@
     <%=link_to "Facebookでログイン", "auth/facebook", :class => 'btn btn-primary btn-large' %></button>
 
   <%=link_to "Google カレンダーテスト","https://www.google.com/calendar/render?action=TEMPLATE&text=こんにちは!こんにちは!&dates=20130119T043000Z/20130119T080000Z&details=http://connpass.com/event/1535/&location=沖縄県糸満市&trp=false&sprop=http://connpass.com/event/1535/&sprop=name:connpass&sf=true&output=xml"%>
-  </div>
+</div>
+<div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-hashtags="おんあぽ">ツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </div>

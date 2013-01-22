@@ -1,5 +1,7 @@
 OnlineMtgRegister::Application.routes.draw do
-  match 'users/:id/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  get "edit_cal/index"
+
+  match 'users/:id/calendar(/:year(/:month(/:day)))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{2}/}
   #match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   get "mypage/index"
@@ -38,6 +40,9 @@ OnlineMtgRegister::Application.routes.draw do
   #     resource :seller
   #   end
 
+  resources :users do
+    resources :events
+  end
   # Sample resource route with more complex sub-resources
   #   resources :products do
   #     resources :comments
@@ -69,4 +74,6 @@ OnlineMtgRegister::Application.routes.draw do
   match "/edit" => "register#index", :as => :edit
   match "/register/record" => "register#record"
   match "/calendars" => "view_calendar#index", :as => :calendars
+  match "/edit_cal" => "edit_cal#index", :as => :edit_cal
+  match '/events/:id'  => 'events#show', :via  => :get
 end

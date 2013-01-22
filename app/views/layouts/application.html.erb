@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "おんあぽ" %></title>
+    <meta property="og:title" content="&#x304a;&#x3093;&#x3042;&#x307d;" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.on-appo.info" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="fb:admins" content="100001285957686" />
+    <title><%= content_for?(:title) ? yield(:title) + "- おんあぽ" : "おんあぽ" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -47,7 +53,7 @@
           <a class="brand" href="<%=root_url%>">おんあぽ</a>
           <div class="container nav-collapse">
             <ul class="nav"> 
-              <li><a href="<%=make_path%>">つかいかた</a></li>
+              <li><a href="#">つかいかた</a></li>
               <li><a href="<%=calendars_path%>"><i class="icon-calendar"> みる</i></a></li>
               <li><a href="mailto:no-reply@on-appo.info?bcc="kimihito@geeoki.com"?subject=お問い合わせ?body=こちらに記入お願いします"><i class="icon-envelope">お問い合わせ</i></a></li>
             </ul>

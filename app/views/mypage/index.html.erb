@@ -1,3 +1,7 @@
+<%content_for(:title ) do %>
+  <%= current_user.name %> さんのマイページ 
+<% end %>
+
 <h2><%=current_user.name%>さんのマイページ</h2>
 <div class="container">
   <div class="span12">
@@ -12,7 +16,19 @@
       <%=link_to "ユーザー名の編集", edit_path, :class => "btn" %>
     </div>
     <div class="span6">
-      <strong>マイカレンダーに登録</strong><br />
+      <strong>アポ待ち日登録</strong><br />
+
+      <% if current_user %>
+        <%= render 'event_form' %>
+      <% end %>
+        </div>
+        <p id="notice"><%= notice %></p>
+      </div>
+      イベントイベントイベントイベント<br />
       <%=link_to "イベントを登録", edit_cal_path, :class => "btn" %>
-      イベントイベントイベントイベント
-  </div></div>
+    </div>
+  </div>
+  <div class="span12">
+    おおおおおお
+  </div>
+</div>
